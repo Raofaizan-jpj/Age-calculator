@@ -1,209 +1,865 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Calculate your exact age in years, months, and days. Discover how many days, weeks, hours, and minutes you've lived. Fast, accurate, and completely free.">
-    <meta name="keywords" content="age calculator, age calculator online, how old am i, calculate age, age in days">
+    <title>Age Calculator – Calculate Your Exact Age Online</title>
+    <meta name="description"
+        content="Calculate your exact age in years, months, weeks and days. Enter your date of birth and get accurate results instantly with our free age calculator.">
+    <meta name="keywords"
+        content="age calculator, calculate age, age calculator online, exact age calculator, calculate my age, age in years months days, age in days, age in weeks, how old am I, date of birth calculator">
     <meta name="author" content="Age Calculator">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://age-calculator-blue-zeta.vercel.app/">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
-<meta name="google-site-verification" content="9Q1q1gPk2qSRM4EOy9Ygh7J5gQvlTC3hn3TO_TI9pf8" />
-    <!-- Open Graph Meta Tags -->
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="9Q1q1gPk2qSRM4EOy9Ygh7J5gQvlTC3hn3TO_TI9pf8">
+
+    <!-- Open Graph Metadata -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Age Calculator - Calculate Your Exact Age">
-    <meta property="og:description" content="Calculate your exact age in years, months, and days instantly. Get total days, weeks, hours, and minutes.">
+
+    <meta property="og:site_name" content="Age Calculator">
+    <meta property="og:title" content="Age Calculator – Calculate Your Exact Age Online">
+    <meta property="og:description"
+        content="Calculate your exact age in years, months, weeks and days. Enter your date of birth and get accurate results instantly with our free age calculator.">
     <meta property="og:url" content="https://age-calculator-blue-zeta.vercel.app/">
     <meta property="og:image" content="https://age-calculator-blue-zeta.vercel.app/og-image.png">
-    
-    <!-- Twitter Card Tags -->
+
+    <!-- Twitter Card Metadata -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Age Calculator - Calculate Your Exact Age">
-    <meta name="twitter:description" content="Calculate your exact age in years, months, and days instantly.">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://age-calculator-blue-zeta.vercel.app/">
-    
-    <title>Age Calculator - Calculate Your Exact Age Online</title>
+    <meta name="twitter:title" content="Age Calculator – Calculate Your Exact Age Online">
+    <meta name="twitter:description"
+        content="Calculate your exact age in years, months, weeks and days. Accurate leap year and calendar calculations.">
+    <meta name="twitter:image" content="https://age-calculator-blue-zeta.vercel.app/og-image.png">
+
+    <!-- Typography & Styling -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://age-calculator-blue-zeta.vercel.app/#website",
+          "url": "https://age-calculator-blue-zeta.vercel.app/",
+          "name": "Age Calculator",
+          "description": "Calculate your exact age in years, months, weeks and days online instantly.",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://age-calculator-blue-zeta.vercel.app/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://age-calculator-blue-zeta.vercel.app/#webpage",
+          "url": "https://age-calculator-blue-zeta.vercel.app/",
+          "name": "Age Calculator – Calculate Your Exact Age Online",
+          "isPartOf": {
+            "@id": "https://age-calculator-blue-zeta.vercel.app/#website"
+          },
+          "description": "Calculate your exact age in years, months, weeks and days. Enter your date of birth and get accurate results instantly with our free age calculator.",
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://age-calculator-blue-zeta.vercel.app/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://age-calculator-blue-zeta.vercel.app/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Age Calculator",
+              "item": "https://age-calculator-blue-zeta.vercel.app/"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How does an age calculator work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "An age calculator compares your exact birth date with a chosen target date (such as today). It breaks down the difference through calendar-based month increments, leap-year checks, and remaining days to yield exact years, months, weeks, and total elapsed days."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I calculate my exact age?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Enter your date of birth into the Date of Birth field, choose your target date (defaults to today), and click 'Calculate Age'. You will instantly receive your full breakdown in years, months, weeks, and days."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I calculate my age on a future date?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Change the 'Calculate Age As Of' date to any future date. The calculator will accurately compute how old you will be on that specific milestone date."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I calculate age in days?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. The calculator computes your exact total days lived by measuring the total milliseconds between your birth date and the target date, divided by the number of milliseconds in a standard day (86,400,000)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I calculate age in weeks?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. The calculator provides your total age in full weeks by dividing your total lived days by 7, while also providing any remaining days."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does the calculator account for leap years?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Our calculator fully accounts for Gregorian leap years (including the 4-year, 100-year, and 400-year rules) as well as birthdays occurring on February 29."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How many days have I been alive?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Enter your date of birth, and look at the 'Age in Days' metric card. It displays the exact, cumulative number of days you have lived up to the selected target date."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How can I find my next birthday?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The calculator automatically evaluates your birth month and day against the target date, shows the exact day and date of your next birthday, and provides a real-time countdown of days remaining."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
+
 <body>
-    <!-- Header -->
+    <!-- Accessibility Skip Link -->
+    <a href="#calculatorCard" class="skip-link">Skip to calculator</a>
+
+    <!-- Navigation Header -->
     <header class="header">
-        <div class="container">
-            <h1>Age Calculator</h1>
-            <p class="subtitle">Calculate your exact age in years, months, and days</p>
+        <div class="container header-container">
+            <a href="#calculatorCard" class="logo" aria-label="Age Calculator Home">
+                <div class="logo-mark" aria-hidden="true">
+                    <svg class="logo-svg" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logoBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#1d4ed8" />
+                                <stop offset="50%" stop-color="#2563eb" />
+                                <stop offset="100%" stop-color="#6366f1" />
+                            </linearGradient>
+                            <linearGradient id="logoAccentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#38bdf8" />
+                                <stop offset="100%" stop-color="#ffffff" />
+                            </linearGradient>
+                            <linearGradient id="sparkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#fbbf24" />
+                                <stop offset="100%" stop-color="#f59e0b" />
+                            </linearGradient>
+                        </defs>
+                        <!-- Rounded Squircle Badge -->
+                        <rect x="1" y="1" width="36" height="36" rx="10" fill="url(#logoBgGrad)" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+                        
+                        <!-- Outer Precision Orbit Dial -->
+                        <circle cx="19" cy="19" r="12.5" stroke="rgba(255,255,255,0.25)" stroke-width="1.2" stroke-dasharray="2 3"/>
+                        
+                        <!-- Milestone Ticks (4 Seasons / Cardinal Points) -->
+                        <circle cx="19" cy="6.5" r="1.3" fill="#38bdf8"/>
+                        <circle cx="31.5" cy="19" r="1.3" fill="rgba(255,255,255,0.7)"/>
+                        <circle cx="19" cy="31.5" r="1.3" fill="rgba(255,255,255,0.7)"/>
+                        <circle cx="6.5" cy="19" r="1.3" fill="rgba(255,255,255,0.7)"/>
+                        
+                        <!-- Stylized Geometric Hourglass / Infinity Time Curve -->
+                        <path d="M12 11.5 H26 L20 18.5 L26 26.5 H12 L18 18.5 Z" stroke="url(#logoAccentGrad)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="rgba(255,255,255,0.08)"/>
+                        
+                        <!-- Center Dynamic Spark / Time Node -->
+                        <circle cx="19" cy="18.5" r="2.2" fill="url(#sparkGrad)"/>
+                        <circle cx="19" cy="18.5" r="4.2" stroke="#fbbf24" stroke-width="0.8" opacity="0.6"/>
+                    </svg>
+                </div>
+                <div class="logo-brand">
+                    <span class="brand-age">Age</span><span class="brand-calc">Calculator</span><span class="brand-dot">.</span>
+                </div>
+            </a>
+            <nav class="nav-links" aria-label="Quick tools navigation">
+                <a href="#calculatorCard" class="nav-link active">Calculator</a>
+                <a href="#how-to-use" class="nav-link">How to Use</a>
+                <a href="#methodology" class="nav-link">Formula</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+            </nav>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="container">
-        <!-- Calculator Section -->
-        <section class="calculator-section">
-            <div class="calculator-card">
-                <h2>Calculate Your Age</h2>
-                
-                <form id="ageForm" class="age-form">
-                    <div class="form-group">
-                        <label for="birthDate">Select Your Date of Birth:</label>
-                        <input 
-                            type="date" 
-                            id="birthDate" 
-                            required
-                            aria-label="Date of birth"
-                        >
-                        <span class="error-message" id="errorMessage"></span>
+    <!-- Main Content Area -->
+    <main id="mainContent">
+        <!-- Hero & Calculator Section -->
+        <section class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-header text-center">
+                    <h1>Age Calculator</h1>
+                    <p class="hero-intro">
+                        Calculate your exact age in years, months, weeks, and days using your date of birth. Enter your
+                        birth date and choose a date to get an accurate age instantly.
+                    </p>
+                    <div class="privacy-pill" role="status">
+                        <span class="privacy-icon" aria-hidden="true">🔒</span>
+                        <span>100% Private &amp; Client-Side — Your birth date never leaves your device.</span>
                     </div>
+                </div>
 
-                    <div class="button-group">
-                        <button type="submit" class="btn btn-calculate">Calculate Age</button>
-                        <button type="reset" class="btn btn-reset">Reset</button>
-                    </div>
-                </form>
+                <!-- Calculator Card -->
+                <div class="calculator-card" id="calculatorCard">
+                    <form id="ageForm" class="age-form" novalidate>
+                        <div class="form-grid">
+                            <!-- Date of Birth Input -->
+                            <div class="input-group">
+                                <label for="birthDate">
+                                    <span class="label-text">Date of Birth</span>
+                                    <span class="label-badge">Required</span>
+                                </label>
+                                <div class="date-input-wrapper">
+                                    <input type="date" id="birthDate" name="birthDate" required
+                                        aria-describedby="birthDateHint" aria-required="true">
+                                </div>
+                                <span class="input-hint" id="birthDateHint">Select your birth day, month, and
+                                    year</span>
+                            </div>
 
-                <!-- Results Section -->
-                <div id="resultsSection" class="results-section hidden">
-                    <h3>Your Age Details</h3>
-                    
-                    <div class="results-grid">
-                        <div class="result-card">
-                            <div class="result-value" id="years">0</div>
-                            <div class="result-label">Years</div>
+                            <!-- Calculate Age As Of (Target Date) Input -->
+                            <div class="input-group">
+                                <div class="label-row">
+                                    <label for="targetDate">
+                                        <span class="label-text">Calculate Age As Of</span>
+                                    </label>
+                                    <button type="button" id="setTodayBtn" class="btn-text-action"
+                                        title="Set to current date">
+                                        Today
+                                    </button>
+                                </div>
+                                <div class="date-input-wrapper">
+                                    <input type="date" id="targetDate" name="targetDate" required
+                                        aria-describedby="targetDateHint">
+                                </div>
+                                <span class="input-hint" id="targetDateHint">Defaults to today's date (or pick a
+                                    past/future milestone)</span>
+                            </div>
                         </div>
-                        <div class="result-card">
-                            <div class="result-value" id="months">0</div>
-                            <div class="result-label">Months</div>
-                        </div>
-                        <div class="result-card">
-                            <div class="result-value" id="days">0</div>
-                            <div class="result-label">Days</div>
-                        </div>
-                    </div>
 
-                    <div class="additional-stats">
-                        <div class="stat-row">
-                            <span class="stat-label">Total Months:</span>
-                            <span class="stat-value" id="totalMonths">0</span>
+                        <!-- Accessible Error Feedback -->
+                        <div id="errorAlert" class="error-alert hidden" role="alert" aria-live="assertive">
+                            <span class="error-icon" aria-hidden="true">⚠️</span>
+                            <span class="error-message" id="errorMessage"></span>
                         </div>
-                        <div class="stat-row">
-                            <span class="stat-label">Total Weeks:</span>
-                            <span class="stat-value" id="totalWeeks">0</span>
+
+                        <!-- Form Control Buttons -->
+                        <div class="button-row">
+                            <button type="submit" id="calculateBtn" class="btn btn-primary">
+                                <span class="btn-icon" aria-hidden="true">⚡</span>
+                                <span>Calculate Age</span>
+                            </button>
+                            <button type="reset" id="resetBtn" class="btn btn-secondary">
+                                <span class="btn-icon" aria-hidden="true">🔄</span>
+                                <span>Reset</span>
+                            </button>
                         </div>
-                        <div class="stat-row">
-                            <span class="stat-label">Total Days:</span>
-                            <span class="stat-value" id="totalDays">0</span>
+                    </form>
+
+                    <!-- Dynamic Results Section -->
+                    <div id="resultsSection" class="results-container hidden" aria-live="polite">
+                        <!-- Hero Result Card: Exact Age -->
+                        <div class="exact-age-banner">
+                            <div class="banner-top">
+                                <span class="banner-badge">Result</span>
+                                <h2 class="banner-title">Your Exact Age</h2>
+                            </div>
+                            <div class="exact-age-display" id="exactAgeSummary">
+                                <div class="age-unit-pill">
+                                    <span class="unit-val" id="exactYears">0</span>
+                                    <span class="unit-name">Years</span>
+                                </div>
+                                <div class="unit-separator" aria-hidden="true">•</div>
+                                <div class="age-unit-pill">
+                                    <span class="unit-val" id="exactMonths">0</span>
+                                    <span class="unit-name">Months</span>
+                                </div>
+                                <div class="unit-separator" aria-hidden="true">•</div>
+                                <div class="age-unit-pill">
+                                    <span class="unit-val" id="exactWeeks">0</span>
+                                    <span class="unit-name">Weeks</span>
+                                </div>
+                                <div class="unit-separator" aria-hidden="true">•</div>
+                                <div class="age-unit-pill">
+                                    <span class="unit-val" id="exactDays">0</span>
+                                    <span class="unit-name">Days</span>
+                                </div>
+                            </div>
+                            <p class="exact-age-sentence" id="exactAgeSentence">
+                                You are exactly 0 years, 0 months, 0 weeks, and 0 days old.
+                            </p>
                         </div>
-                        <div class="stat-row">
-                            <span class="stat-label">Total Hours:</span>
-                            <span class="stat-value" id="totalHours">0</span>
+
+                        <!-- Result Cards Grid -->
+                        <div class="cards-grid">
+                            <!-- Card 1: Age in Years -->
+                            <div class="stat-card">
+                                <div class="card-icon" aria-hidden="true">🎂</div>
+                                <div class="card-content">
+                                    <span class="card-label">Age in Years</span>
+                                    <div class="card-value" id="cardYears">0</div>
+                                    <span class="card-subtext" id="cardYearsDecimal">0.00 years total</span>
+                                </div>
+                            </div>
+
+                            <!-- Card 2: Age in Months -->
+                            <div class="stat-card">
+                                <div class="card-icon" aria-hidden="true">📅</div>
+                                <div class="card-content">
+                                    <span class="card-label">Age in Months</span>
+                                    <div class="card-value" id="cardMonths">0</div>
+                                    <span class="card-subtext" id="cardMonthsSub">Total months lived</span>
+                                </div>
+                            </div>
+
+                            <!-- Card 3: Age in Weeks -->
+                            <div class="stat-card">
+                                <div class="card-icon" aria-hidden="true">🗓️</div>
+                                <div class="card-content">
+                                    <span class="card-label">Age in Weeks</span>
+                                    <div class="card-value" id="cardWeeks">0</div>
+                                    <span class="card-subtext" id="cardWeeksSub">Total weeks lived</span>
+                                </div>
+                            </div>
+
+                            <!-- Card 4: Age in Days -->
+                            <div class="stat-card">
+                                <div class="card-icon" aria-hidden="true">☀️</div>
+                                <div class="card-content">
+                                    <span class="card-label">Age in Days</span>
+                                    <div class="card-value" id="cardDays">0</div>
+                                    <span class="card-subtext">Total days lived</span>
+                                </div>
+                            </div>
+
+                            <!-- Card 5: Next Birthday -->
+                            <div class="stat-card stat-card-highlight">
+                                <div class="card-icon" aria-hidden="true">🎉</div>
+                                <div class="card-content">
+                                    <span class="card-label">Next Birthday</span>
+                                    <div class="card-value card-value-sm" id="cardNextBirthday">—</div>
+                                    <span class="card-subtext" id="cardNextBirthdayDay">—</span>
+                                </div>
+                            </div>
+
+                            <!-- Card 6: Days Until Birthday -->
+                            <div class="stat-card">
+                                <div class="card-icon" aria-hidden="true">⏳</div>
+                                <div class="card-content">
+                                    <span class="card-label">Days Until Birthday</span>
+                                    <div class="card-value" id="cardDaysUntilBirthday">0</div>
+                                    <span class="card-subtext" id="cardDaysUntilBirthdaySub">Days remaining</span>
+                                </div>
+                            </div>
+
+                            <!-- Card 7: Day of Birth -->
+                            <div class="stat-card">
+                                <div class="card-icon" aria-hidden="true">🌟</div>
+                                <div class="card-content">
+                                    <span class="card-label">Day of Birth</span>
+                                    <div class="card-value card-value-sm" id="cardDayOfBirth">—</div>
+                                    <span class="card-subtext">Day you were born</span>
+                                </div>
+                            </div>
+
+                            <!-- Card 8: Zodiac Sign -->
+                            <div class="stat-card">
+                                <div class="card-icon" aria-hidden="true" id="cardZodiacIcon">♈</div>
+                                <div class="card-content">
+                                    <span class="card-label">Zodiac Sign</span>
+                                    <div class="card-value card-value-sm" id="cardZodiac">—</div>
+                                    <span class="card-subtext" id="cardZodiacDates">—</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="stat-row">
-                            <span class="stat-label">Total Minutes:</span>
-                            <span class="stat-value" id="totalMinutes">0</span>
+
+                        <!-- Micro Metrics Breakdown: Hours, Minutes, Seconds -->
+                        <div class="extra-metrics-panel">
+                            <h3 class="extra-metrics-title">Cumulative Time Lived</h3>
+                            <div class="extra-metrics-grid">
+                                <div class="extra-metric-item">
+                                    <span class="metric-num" id="statHours">0</span>
+                                    <span class="metric-name">Total Hours</span>
+                                </div>
+                                <div class="extra-metric-item">
+                                    <span class="metric-num" id="statMinutes">0</span>
+                                    <span class="metric-name">Total Minutes</span>
+                                </div>
+                                <div class="extra-metric-item">
+                                    <span class="metric-num" id="statSeconds">0</span>
+                                    <span class="metric-name">Total Seconds</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="stat-row">
-                            <span class="stat-label">Next Birthday:</span>
-                            <span class="stat-value" id="nextBirthday">-</span>
-                        </div>
-                        <div class="stat-row">
-                            <span class="stat-label">Days Until Birthday:</span>
-                            <span class="stat-value" id="daysUntilBirthday">-</span>
+
+                        <!-- Copy & Share Action Bar -->
+                        <div class="action-toolbar">
+                            <button type="button" id="copyResultBtn" class="btn btn-action">
+                                <span class="action-icon" aria-hidden="true">📋</span>
+                                <span>Copy Result</span>
+                            </button>
+                            <button type="button" id="shareResultBtn" class="btn btn-action">
+                                <span class="action-icon" aria-hidden="true">↗️</span>
+                                <span>Share Result</span>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Information Section -->
-        <section class="info-section">
-            <article class="info-card">
-                <h2>What Is an Age Calculator?</h2>
-                <p>An Age Calculator is a simple online tool that calculates your exact age based on your date of birth. It shows you how many years, months, and days you've been alive. Beyond just your age in years, it can also calculate the total number of days, weeks, hours, and minutes you've lived, as well as when your next birthday will occur.</p>
-                <p>This tool is useful for various purposes, including verifying your age for online services, understanding your exact age for personal interest, or simply satisfying your curiosity about how much time has passed since your birth.</p>
-            </article>
+        <!-- SEO Educational Content Sections -->
+        <section class="content-section" id="how-to-use">
+            <div class="container">
+                <article class="content-card">
+                    <h2>How to Use the Age Calculator</h2>
+                    <p>
+                        Calculating your chronological age has never been simpler. Follow these straightforward steps to
+                        calculate your exact age online:
+                    </p>
+                    <div class="steps-grid">
+                        <div class="step-card">
+                            <div class="step-badge">1</div>
+                            <h3>Enter Date of Birth</h3>
+                            <p>Select your birth year, month, and day using the calendar picker or by typing directly
+                                into the field.</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-badge">2</div>
+                            <h3>Select Target Date</h3>
+                            <p>The "Calculate Age As Of" field automatically sets to today's date. Keep it as today or
+                                pick any milestone date.</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-badge">3</div>
+                            <h3>Click Calculate Age</h3>
+                            <p>Press the primary button to receive your instant, verified calendar breakdown with zero
+                                page reloads.</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-badge">4</div>
+                            <h3>Copy or Share Results</h3>
+                            <p>Use the "Copy Result" or "Share Result" buttons to save your statistics or share your
+                                milestones with friends.</p>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="info-card">
-                <h2>How to Calculate Age</h2>
-                <p>Calculating age manually can be complex due to varying month lengths and leap years. To calculate your age accurately:</p>
-                <ol>
-                    <li>Start with your birth year and subtract it from the current year to get your age in years</li>
-                    <li>Check if your birthday has occurred this year; if not, subtract one year</li>
-                    <li>Count the months from your birth month to the current month to get additional months</li>
-                    <li>Count the remaining days from your birth day to today to get the days component</li>
-                    <li>Account for leap years (divisible by 4, except century years not divisible by 400)</li>
-                </ol>
-                <p>Our Age Calculator handles all these calculations automatically, accounting for leap years and different month lengths, ensuring complete accuracy.</p>
-            </article>
+                <article class="content-card" id="methodology">
+                    <h2>How Age Is Calculated</h2>
+                    <p>
+                        When people ask "how old am I?", calculating the exact answer requires more than simple
+                        subtraction. Unlike standard mathematical quantities, human age is tied to the Gregorian
+                        calendar, which contains varying month lengths (28, 29, 30, or 31 days) and leap years every
+                        four years.
+                    </p>
+                    <p>
+                        To determine your exact age, our algorithm performs three sequential calendar adjustments:
+                    </p>
+                    <ul>
+                        <li><strong>Year Increments:</strong> We compare the birth year and target year. If the target
+                            date's month and day precede the birthday in that year, the completed years equal
+                            <code>targetYear - birthYear - 1</code>. Otherwise, it equals
+                            <code>targetYear - birthYear</code>.</li>
+                        <li><strong>Month Increments:</strong> We calculate the elapsed calendar months since your last
+                            birthday milestone. If the target day is lower than the birth day, we borrow from the
+                            preceding calendar month based on its actual days.</li>
+                        <li><strong>Day &amp; Week Increments:</strong> The remaining days are counted accurately
+                            according to the specific preceding month's length. Then, remaining days are subdivided into
+                            full weeks and extra days.</li>
+                    </ul>
+                </article>
 
-            <article class="info-card">
-                <h2>How the Age Calculator Works</h2>
-                <p>The Age Calculator uses advanced algorithms to determine your exact age with precision. Here's how it works:</p>
-                <ul>
-                    <li><strong>Date Validation:</strong> The tool first validates your birth date to ensure it's in the correct format and not in the future.</li>
-                    <li><strong>Leap Year Detection:</strong> It correctly identifies leap years to ensure accurate day counts.</li>
-                    <li><strong>Precise Calculation:</strong> It calculates the exact difference between your birth date and today's date, breaking it down into years, months, and days.</li>
-                    <li><strong>Additional Metrics:</strong> Beyond basic age, it calculates total months, weeks, days, hours, and minutes.</li>
-                    <li><strong>Birthday Tracking:</strong> It determines when your next birthday falls and how many days remain until then.</li>
-                </ul>
-                <p>All calculations happen in real-time in your browser without any delays or external processing.</p>
-            </article>
+                <article class="content-card">
+                    <h2>Age Calculator Formula</h2>
+                    <p>
+                        A common misconception is that age can be calculated using a single division formula like
+                        <code>Total Days ÷ 365.25</code>. While that provides an approximation in decimal format, it
+                        cannot produce an accurate statement of completed calendar years, months, weeks, and days
+                        because individual years vary between 365 and 366 days, and individual months range from 28 to
+                        31 days.
+                    </p>
+                    <div class="formula-box">
+                        <div class="formula-header">Accurate Calendar Algorithm Formulation:</div>
+                        <code>
+                            Completed Years = YearsElapsed(BirthDate, TargetDate)<br>
+                            AnchorDate₁ = BirthDate + Completed Years<br>
+                            Completed Months = MonthsElapsed(AnchorDate₁, TargetDate)<br>
+                            AnchorDate₂ = AnchorDate₁ + Completed Months<br>
+                            Remaining Days = TargetDate - AnchorDate₂<br>
+                            Completed Weeks = ⌊Remaining Days / 7⌋<br>
+                            Days in Week = Remaining Days mod 7
+                        </code>
+                    </div>
+                    <p>
+                        By anchoring to each successive calendar milestone, our exact age calculator ensures your result
+                        conforms to official legal and astronomical definitions.
+                    </p>
+                </article>
 
-            <article class="info-card">
-                <h2>Why Use an Online Age Calculator?</h2>
-                <p>Using an online Age Calculator offers numerous advantages:</p>
-                <ul>
-                    <li><strong>Accuracy:</strong> Eliminates manual calculation errors and accounts for leap years automatically.</li>
-                    <li><strong>Speed:</strong> Get your results instantly without any delays.</li>
-                    <li><strong>Comprehensive:</strong> Beyond years, months, and days, see total weeks, days, hours, and minutes.</li>
-                    <li><strong>Free:</strong> No subscriptions or fees required.</li>
-                    <li><strong>Privacy:</strong> Your data stays on your device and is not stored on our servers.</li>
-                    <li><strong>Accessibility:</strong> Works on any device with a web browser.</li>
-                    <li><strong>Multiple Uses:</strong> Useful for verifying age, legal requirements, birthday planning, or personal curiosity.</li>
-                </ul>
-            </article>
-        </section>
+                <article class="content-card">
+                    <h2>Age in Years, Months, Weeks and Days</h2>
+                    <p>
+                        Depending on your purpose, different units of age provide distinct perspectives on your life
+                        span:
+                    </p>
+                    <div class="table-responsive">
+                        <table class="info-table">
+                            <thead>
+                                <tr>
+                                    <th>Measurement Unit</th>
+                                    <th>Definition</th>
+                                    <th>Typical Use Case</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Years</strong></td>
+                                    <td>Full revolutions of the Earth around the Sun.</td>
+                                    <td>Official IDs, legal milestones, birthdays, school admissions.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Months</strong></td>
+                                    <td>Lunar cycles aligned to calendar designations.</td>
+                                    <td>Infant developmental tracking, medical milestones, subscriptions.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Weeks</strong></td>
+                                    <td>Fixed 7-day cyclical periods.</td>
+                                    <td>Pregnancy gestation, fitness programs, financial budgeting.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Days</strong></td>
+                                    <td>Exact number of 24-hour diurnal rotations lived.</td>
+                                    <td>Personal curiosity, anniversary celebrations, statistical studies.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
 
-        <!-- FAQ Section -->
-        <section class="faq-section">
-            <h2>Frequently Asked Questions</h2>
-            
-            <div class="faq-container">
-                <details class="faq-item">
-                    <summary><strong>How do I calculate my age?</strong></summary>
-                    <p>Simply enter your date of birth in the calculator field and click "Calculate Age". The tool will instantly show you your exact age in years, months, and days, along with additional statistics like total days lived and your next birthday.</p>
-                </details>
+                <article class="content-card">
+                    <h2>How Many Days Old Am I?</h2>
+                    <p>
+                        Finding your total days lived is one of the most exciting metrics provided by a date of birth
+                        calculator. Because everyday calendars reset each month, we rarely appreciate just how many
+                        thousands of sunrises we have witnessed.
+                    </p>
+                    <p>
+                        To calculate your total days old, the system calculates the absolute time delta in UTC
+                        milliseconds between your birth date at midnight and your target date at midnight, dividing by
+                        <code>86,400,000</code> (the number of milliseconds in 24 hours):
+                    </p>
+                    <div class="formula-box">
+                        <code>Total Days Lived = ⌊(Target Date Timestamp - Birth Date Timestamp) / 86,400,000⌋</code>
+                    </div>
+                    <p>
+                        For instance, a person reaching their 30th birthday has lived roughly 10,957 days, factoring in
+                        7 or 8 leap days depending on the century boundaries!
+                    </p>
+                </article>
 
-                <details class="faq-item">
-                    <summary><strong>Can I calculate my age in days?</strong></summary>
-                    <p>Yes! Our Age Calculator not only shows your age in years, months, and days, but also displays the total number of days you've lived. You can also see the total number of weeks, hours, and minutes.</p>
-                </details>
+                <article class="content-card">
+                    <h2>How Many Weeks Old Am I?</h2>
+                    <p>
+                        Understanding your age in weeks offers a compelling life-planning perspective. Tim Urban's
+                        famous "Your Life in Weeks" concept demonstrates how visualizing life in 7-day units makes every
+                        week count.
+                    </p>
+                    <p>
+                        Your total weeks are calculated directly:
+                    </p>
+                    <div class="formula-box">
+                        <code>Total Weeks Lived = ⌊Total Days Lived / 7⌋</code>
+                    </div>
+                    <p>
+                        Any remaining days that do not form a complete 7-day week are reported alongside, giving you an
+                        exact measurement such as 1,350 weeks and 4 days.
+                    </p>
+                </article>
 
-                <details class="faq-item">
-                    <summary><strong>Does the calculator account for leap years?</strong></summary>
-                    <p>Absolutely. The Age Calculator is programmed to accurately account for leap years. A leap year occurs every 4 years (except for century years, which must be divisible by 400). This ensures your age calculations are always precise.</p>
-                </details>
+                <article class="content-card">
+                    <h2>When Is My Next Birthday?</h2>
+                    <p>
+                        Our calculator calculates your upcoming birthday dynamically. It checks whether your birthday in
+                        the target year has already occurred:
+                    </p>
+                    <ul>
+                        <li>If your birthday has not yet arrived this year, your next birthday is set to that date.</li>
+                        <li>If your birthday has already passed this year, your next birthday is set to the same date
+                            next year.</li>
+                        <li>For leap year babies born on February 29, the calculator handles non-leap years
+                            appropriately by highlighting celebration on February 28 or March 1, and marks the exact
+                            4-year leap anniversary.</li>
+                    </ul>
+                    <p>
+                        The "Days Until Birthday" card provides a daily countdown so you can plan celebrations, trips,
+                        or personal goals well in advance.
+                    </p>
+                </article>
 
-                <details class="faq-item">
-                    <summary><strong>Can I calculate the age between two dates?</strong></summary>
-                    <p>The current version of this Age Calculator is designed to calculate your age from your birth date to today. However, the underlying calculation methodology can be applied to any two dates to determine the time elapsed between them.</p>
-                </details>
+                <article class="content-card">
+                    <h2>Leap Years and Age Calculation</h2>
+                    <p>
+                        A calendar year is roughly 365.2422 days long. To compensate for the fraction of a day, the
+                        Gregorian calendar adds an extra leap day (February 29) according to these strict rules:
+                    </p>
+                    <ol>
+                        <li>Every year evenly divisible by 4 is a leap year;</li>
+                        <li>Except years evenly divisible by 100 are NOT leap years;</li>
+                        <li>Unless they are also evenly divisible by 400 (which ARE leap years).</li>
+                    </ol>
+                    <p>
+                        Thus, 2000 was a leap year, 1900 was not, and 2024, 2028, and 2032 are leap years. A reliable
+                        exact age calculator must account for these variations; otherwise, day counts can be off by
+                        multiple days over a person's lifespan. Our tool incorporates these Gregorian adjustments
+                        natively.
+                    </p>
+                </article>
 
-                <details class="faq-item">
-                    <summary><strong>Is the Age Calculator free?</strong></summary>
-                    <p>Yes, the Age Calculator is completely free to use. There are no hidden charges, subscriptions, or fees. Simply enter your date of birth and get your results instantly, as many times as you want.</p>
-                </details>
+                <!-- Frequently Asked Questions Section -->
+                <article class="content-card" id="faq">
+                    <h2>Frequently Asked Questions</h2>
+                    <p class="faq-subtext">Common questions about age calculation, leap years, and date of birth
+                        metrics.</p>
+
+                    <div class="faq-accordion" role="region" aria-label="Frequently Asked Questions list">
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                <span>How does an age calculator work?</span>
+                                <span class="faq-icon" aria-hidden="true">+</span>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>An age calculator compares your exact birth date with a chosen target date (such as
+                                    today). It breaks down the difference through calendar-based month increments,
+                                    leap-year checks, and remaining days to yield exact years, months, weeks, and total
+                                    elapsed days.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                <span>How do I calculate my exact age?</span>
+                                <span class="faq-icon" aria-hidden="true">+</span>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>Enter your date of birth into the Date of Birth field, choose your target date
+                                    (defaults to today), and click 'Calculate Age'. You will instantly receive your full
+                                    breakdown in years, months, weeks, and days.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                <span>Can I calculate my age on a future date?</span>
+                                <span class="faq-icon" aria-hidden="true">+</span>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>Yes. Change the 'Calculate Age As Of' date to any future date. The calculator will
+                                    accurately compute how old you will be on that specific milestone date.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                <span>Can I calculate age in days?</span>
+                                <span class="faq-icon" aria-hidden="true">+</span>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>Yes. The calculator computes your exact total days lived by measuring the total
+                                    milliseconds between your birth date and the target date, divided by the number of
+                                    milliseconds in a standard day (86,400,000).</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                <span>Can I calculate age in weeks?</span>
+                                <span class="faq-icon" aria-hidden="true">+</span>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>Yes. The calculator provides your total age in full weeks by dividing your total
+                                    lived days by 7, while also providing any remaining days.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                <span>Does the calculator account for leap years?</span>
+                                <span class="faq-icon" aria-hidden="true">+</span>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>Yes. Our calculator fully accounts for Gregorian leap years (including the 4-year,
+                                    100-year, and 400-year rules) as well as birthdays occurring on February 29.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                <span>How many days have I been alive?</span>
+                                <span class="faq-icon" aria-hidden="true">+</span>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>Enter your date of birth, and look at the 'Age in Days' metric card. It displays the
+                                    exact, cumulative number of days you have lived up to the selected target date.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                <span>How can I find my next birthday?</span>
+                                <span class="faq-icon" aria-hidden="true">+</span>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>The calculator automatically evaluates your birth month and day against the target
+                                    date, shows the exact day and date of your next birthday, and provides a real-time
+                                    countdown of days remaining.</p>
+                            </div>
+                        </details>
+                    </div>
+                </article>
+
+                <!-- Internal Linking / Related Tools Section -->
+                <article class="content-card">
+                    <h2>Explore Related Calculation Tools</h2>
+                    <p>Expand your date and mathematical calculations with our suite of accurate tools:</p>
+                    <div class="tools-grid">
+                        <a href="#calculatorCard" class="tool-card active-tool">
+                            <span class="tool-icon">🎂</span>
+                            <div class="tool-info">
+                                <span class="tool-name">Age Calculator</span>
+                                <span class="tool-desc">Calculate exact age, days, and next birthday.</span>
+                            </div>
+                        </a>
+                        <div class="tool-card">
+                            <span class="tool-icon">📅</span>
+                            <div class="tool-info">
+                                <span class="tool-name">Date Calculator</span>
+                                <span class="tool-desc">Add or subtract days, months, and years from any date.</span>
+                            </div>
+                        </div>
+                        <div class="tool-card">
+                            <span class="tool-icon">🗓️</span>
+                            <div class="tool-info">
+                                <span class="tool-name">Day of the Week Calculator</span>
+                                <span class="tool-desc">Determine what day of the week any historical date fell
+                                    on.</span>
+                            </div>
+                        </div>
+                        <div class="tool-card">
+                            <span class="tool-icon">📊</span>
+                            <div class="tool-info">
+                                <span class="tool-name">Percentage Calculator</span>
+                                <span class="tool-desc">Compute percentage increases, decreases, and fractions.</span>
+                            </div>
+                        </div>
+                        <div class="tool-card">
+                            <span class="tool-icon">⚖️</span>
+                            <div class="tool-info">
+                                <span class="tool-name">BMI Calculator</span>
+                                <span class="tool-desc">Calculate Body Mass Index and healthy weight ranges.</span>
+                            </div>
+                        </div>
+                        <div class="tool-card">
+                            <span class="tool-icon">⏱️</span>
+                            <div class="tool-info">
+                                <span class="tool-name">Time Calculator</span>
+                                <span class="tool-desc">Calculate duration, elapsed hours, minutes, and time
+                                    zones.</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
 
+    <!-- Toast Notification for Copy/Share -->
+    <div id="toastNotification" class="toast" role="status" aria-live="polite">
+        <span class="toast-icon" id="toastIcon">✓</span>
+        <span class="toast-message" id="toastMessage">Result copied to clipboard!</span>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Age Calculator. All rights reserved.</p>
-            <p>This tool is provided as-is for informational purposes. Always verify important dates through official documentation when needed.</p>
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#calculatorCard" class="logo logo-footer" aria-label="Age Calculator Home">
+                        <div class="logo-mark" aria-hidden="true">
+                            <svg class="logo-svg" width="32" height="32" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="1" y="1" width="36" height="36" rx="10" fill="url(#logoBgGrad)" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+                                <circle cx="19" cy="19" r="12.5" stroke="rgba(255,255,255,0.25)" stroke-width="1.2" stroke-dasharray="2 3"/>
+                                <circle cx="19" cy="6.5" r="1.3" fill="#38bdf8"/>
+                                <circle cx="31.5" cy="19" r="1.3" fill="rgba(255,255,255,0.7)"/>
+                                <circle cx="19" cy="31.5" r="1.3" fill="rgba(255,255,255,0.7)"/>
+                                <circle cx="6.5" cy="19" r="1.3" fill="rgba(255,255,255,0.7)"/>
+                                <path d="M12 11.5 H26 L20 18.5 L26 26.5 H12 L18 18.5 Z" stroke="url(#logoAccentGrad)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="rgba(255,255,255,0.08)"/>
+                                <circle cx="19" cy="18.5" r="2.2" fill="url(#sparkGrad)"/>
+                                <circle cx="19" cy="18.5" r="4.2" stroke="#fbbf24" stroke-width="0.8" opacity="0.6"/>
+                            </svg>
+                        </div>
+                        <div class="logo-brand">
+                            <span class="brand-age">Age</span><span class="brand-calc">Calculator</span><span class="brand-dot">.</span>
+                        </div>
+                    </a>
+                    <p class="footer-tagline">Accurate, private, and instant date of birth calculations.</p>
+                </div>
+                <div class="footer-nav">
+                    <span class="footer-heading">Quick Links</span>
+                    <a href="#calculatorCard">Calculator</a>
+                    <a href="#how-to-use">How to Use</a>
+                    <a href="#methodology">Calculation Formula</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Age Calculator. All rights reserved. Designed for speed, precision, and privacy.</p>
+                <p class="footer-disclaimer">This tool is provided for personal informational purposes. Calculations are
+                    performed client-side in your browser.</p>
+            </div>
         </div>
     </footer>
 
+    <!-- Script -->
     <script src="script.js"></script>
 </body>
+
 </html>
