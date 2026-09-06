@@ -1,0 +1,8 @@
+{
+  "framework": null,
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/age-calculator", "destination": "/index.html" },
+    { "source": "/age-calculator/", "destination": "/index.html" }
+  ]
+}
